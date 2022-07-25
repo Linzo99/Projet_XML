@@ -1,2 +1,21 @@
 <?xml version="1.0"?>
-<cinema><titre>Eternals</titre><duree>2h30mn</duree><genre>action</genre><realisateur>linzo</realisateur><annee_production>2022</annee_production><langue_diffusion>fran&#xE7;ais</langue_diffusion><synopsis>Un tres bon fillm</synopsis><note_presse>5</note_presse><note_spectateurs>10</note_spectateurs><acteurs><acteur>alioue</acteur><acteur>moussa</acteur><acteur>demba</acteur></acteurs><horaires><horaire>Lun,DIm 10H|20H</horaire><horaire>Ven,Sam 23H</horaire></horaires></cinema>
+<cinema>
+    <titre>Eternals</titre>
+    <duree>2h30mn</duree>
+    <genre>action</genre>
+    <realisateur>linzo</realisateur>
+    <annee_production>2022</annee_production>
+    <langue_diffusion>fran&#xE7;ais</langue_diffusion>
+    <synopsis>Un tres bon fillm</synopsis>
+    <note_presse>5</note_presse>
+    <note_spectateurs>10</note_spectateurs>
+    <acteurs>
+        <acteur>alioue</acteur>
+        <acteur>moussa</acteur>
+        <acteur>demba</acteur>
+    </acteurs>
+    <horaires>
+        <horaire>Lun,DIm 10H|20H</horaire>
+        <horaire>Ven,Sam 23H</horaire>
+    </horaires>
+</cinema>

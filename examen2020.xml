@@ -1,2 +1,41 @@
 <?xml version="1.0"?>
-<examen><code>2020</code><titre>Examen Archi</titre><date annee="2022" mois="02"/><questions><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question><question><partie>Qui suis-je ?</partie></question></questions></examen>
+<examen>
+    <code>2020</code>
+    <titre>Examen Archi</titre>
+    <date annee="2022" mois="02" />
+    <questions>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+        <question>
+            <partie>Qui suis-je ?</partie>
+        </question>
+    </questions>
+</examen>
