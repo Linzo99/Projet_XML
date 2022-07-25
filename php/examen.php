@@ -1,5 +1,5 @@
 <?php
-    include("./Model/Examen.php");
+    include("../Model/Examen.php");
 
     $args = ['code', 'titre', 'annee', 'mois'];
     if($_SERVER["REQUEST_METHOD"] == "POST"){

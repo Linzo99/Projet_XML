@@ -1,5 +1,5 @@
 <?php
-    include("./Model/Cinema.php");
+    include("../Model/Cinema.php");
 
     $args = ['titre','duree', 'genre', 'realisateur', 'annee_production', 'langue_diffusion', 'synopsis',
              'note_presse', 'note_spectateurs'];

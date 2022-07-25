@@ -1,5 +1,5 @@
 <?php
-    include("./Model/Restaurant.php");
+    include("../Model/Restaurant.php");
 
     $args = ['nom','adresse', 'restaurateur', 'description', 'devise'];
     if($_SERVER["REQUEST_METHOD"] == "POST"){

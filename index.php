@@ -9,9 +9,9 @@
 <body>
     <fieldset>
         <legend>Creer un fichier</legend>
-        <p><a href="cinema.php">Cinema</a></p>
-        <p><a href="examen.php">Examen</a></p>
-        <p><a href="restaurant.php">Restaurant</a></p>
+        <p><a href="php/cinema.php">Cinema</a></p>
+        <p><a href="php/examen.php">Examen</a></p>
+        <p><a href="php/restaurant.php">Restaurant</a></p>
     </fieldset>
     <br/>
     <br/>
