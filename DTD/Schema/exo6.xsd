@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="examen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titre" type="xs:string" />
+        <xs:element name="date">
+          <xs:complexType>
+            <xs:attribute name="mois" type="xs:unsignedByte" use="required" />
+            <xs:attribute name="annee" type="xs:unsignedShort" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="questions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="question">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="partie">
+                      <xs:complexType mixed="true">
+                        <xs:sequence minOccurs="0">
+                          <xs:element maxOccurs="unbounded" name="partie">
+                            <xs:complexType mixed="true">
+                              <xs:sequence minOccurs="0">
+                                <xs:element maxOccurs="unbounded" name="partie" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="coursCode" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

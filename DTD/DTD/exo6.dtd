@@ -1,0 +1,11 @@
+<!ELEMENT examen (titre, date, questions)>
+    <!ATTLIST examen coursCode NMTOKEN #REQUIRED>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT date EMPTY>
+    <!ATTLIST date
+        mois (01|02|03|04|05|06|07|08|09|10|11|12) #REQUIRED
+        annee NMTOKEN #REQUIRED    
+    >
+<!ELEMENT questions (question, question, question, question, question, question, question, question, question, question, question?)>
+<!ELEMENT question (partie+)>
+<!ELEMENT partie (#PCDATA|partie)*>

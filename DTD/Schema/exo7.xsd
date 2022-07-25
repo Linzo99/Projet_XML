@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="exo7_bog0sso.dtd" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified" targetNamespace="exo7_bog0sso.dtd">
+  <xs:element name="portail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fiche" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fiche">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="coordonnees"/>
+        <xs:element ref="carte"/>
+        <xs:element ref="menus" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="coordonnees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="adresse"/>
+        <xs:element ref="restaurateur"/>
+        <xs:element ref="description" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nom" type="xs:string"/>
+  <xs:element name="adresse" type="xs:string"/>
+  <xs:element name="restaurateur" type="xs:string"/>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="liste" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="paragraphe" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="texteImportant" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="liste" type="xs:string"/>
+  <xs:element name="paragraphe">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="texteParagraphe"/>
+        <xs:element ref="image" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="texteParagraphe" type="xs:string"/>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:attribute name="url" type="xs:string" use="required"/>
+      <xs:attribute name="position">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="gauche"/>
+            <xs:enumeration value="droite"/>
+            <xs:enumeration value="centre"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="texteImportant">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="important">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="oui"/>
+                <xs:enumeration value="non"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="carte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="plat" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="plat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prix"/>
+        <xs:element ref="descriptionPlat" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="typeRepas" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="entree"/>
+            <xs:enumeration value="dessert"/>
+            <xs:enumeration value="plat"/>
+            <xs:enumeration value="fromage"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prix">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="devise" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="EUR"/>
+                <xs:enumeration value="USD"/>
+                <xs:enumeration value="XOF"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="descriptionPlat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="paragraphe"/>
+        <xs:element ref="texteImportant" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="menus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="menu" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="presentation">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="apparition"/>
+            <xs:enumeration value="prix"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="menu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="titreMenu"/>
+        <xs:element ref="descriptionMenu" minOccurs="0"/>
+        <xs:element ref="prix"/>
+        <xs:element ref="carte" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="titreMenu" type="xs:string"/>
+  <xs:element name="descriptionMenu" type="xs:string"/>
+</xs:schema>

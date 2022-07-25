@@ -1,0 +1,26 @@
+<!ELEMENT portail (fiche+)>
+<!ELEMENT fiche (coordonnees, carte, menus*)>
+<!ELEMENT coordonnees (nom, adresse, restaurateur, description?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT restaurateur (#PCDATA)>
+<!ELEMENT description (liste*, paragraphe*, texteImportant*)+>
+<!ELEMENT liste (#PCDATA)>
+<!ELEMENT paragraphe (texteParagraphe,image?)*>
+<!ELEMENT texteParagraphe (#PCDATA)>
+<!ELEMENT image EMPTY>
+<!ATTLIST image url CDATA #REQUIRED>
+<!ATTLIST image position (gauche|droite|centre) #IMPLIED>
+<!ELEMENT texteImportant (#PCDATA)>
+<!ATTLIST texteImportant important (oui|non) #IMPLIED>
+<!ELEMENT carte (plat+)>
+<!ELEMENT plat (prix,descriptionPlat?)>
+<!ATTLIST plat typeRepas (entree | dessert | plat | fromage) #REQUIRED >
+<!ELEMENT prix (#PCDATA)>
+<!ATTLIST prix devise (EUR |USD |XOF) #REQUIRED>
+<!ELEMENT descriptionPlat (paragraphe,texteImportant?)>
+<!ELEMENT menus (menu+)>
+<!ATTLIST menus presentation ( apparition | prix ) #IMPLIED>
+<!ELEMENT menu (titreMenu, descriptionMenu?,prix,carte+)>
+<!ELEMENT titreMenu (#PCDATA)>
+<!ELEMENT descriptionMenu (#PCDATA)>
