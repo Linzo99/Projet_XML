@@ -53,7 +53,7 @@ class Cinema {
         foreach($this->horaires as $horaire)
             $xml->horaires->addChild('horaire', $horaire);
 
-        $xml->asXML($filename.'.xml');
+        $xml->asXML('../'.$filename.'.xml');
     }
 }
 ?>

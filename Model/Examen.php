@@ -33,7 +33,7 @@ class Examen {
             $quest->addChild('partie', $question);
         }
 
-        $xml->asXML($filename.'.xml');
+        $xml->asXML('../'.$filename.'.xml');
     }
 }
 ?>

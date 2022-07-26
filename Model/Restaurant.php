@@ -45,7 +45,7 @@
                 $new_plat->addChild('descriptionPlat', $plat[2]);
             }
 
-            $xml->asXML($filename.'.xml');
+            $xml->asXML('../'.$filename.'.xml');
 
         }
 
